@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Korom | Chief Accelerating Officer | My BnB Accelerator</title>
+    <meta name="description" content="Nicholas Korom is the founder and Chief Accelerating Officer of My BnB Accelerator, LLC, helping high-income earners build tax-saving, cash-flowing short-term rental portfolios.">
+    <meta name="og:title" content="Nicholas Korom | Chief Accelerating Officer">
+    <meta name="og:description" content="Founder of My BnB Accelerator. 500+ homes closed. 300+ clients. Helping high-income earners build tax-saving Airbnb portfolios.">
+    <meta name="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #c9a227;
+            --accent-light: #d4b44a;
+            --text: #2d2d3a;
+            --text-light: #6b6b80;
+            --bg: #fafafa;
+            --white: #ffffff;
+            --border: #e8e8ec;
+            --section-alt: #f4f3ef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 0 2rem;
+            transition: box-shadow 0.3s;
+        }
+        nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.18); }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 2rem 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201,162,39,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            background: rgba(201,162,39,0.12);
+            border: 1px solid rgba(201,162,39,0.25);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            letter-spacing: 0.02em;
+        }
+        .hero-cta:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201,162,39,0.3);
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 4px;
+        }
+
+        /* ---- SECTIONS ---- */
+        section {
+            padding: 100px 2rem;
+        }
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+        }
+
+        /* ---- ABOUT ---- */
+        .about { background: var(--white); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1.25rem;
+            font-size: 1.02rem;
+        }
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .highlight-card {
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .highlight-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+        .highlight-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.5;
+        }
+        .about-visual {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 400px;
+        }
+        .about-visual-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(201,162,39,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .about-visual-icon svg { width: 36px; height: 36px; fill: var(--accent); }
+        .about-visual h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+        .about-visual p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            max-width: 280px;
+        }
+
+        /* ---- SERVICES ---- */
+        .services { background: var(--section-alt); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.25rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+            border-color: var(--accent);
+        }
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(201,162,39,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .service-icon svg { width: 24px; height: 24px; fill: var(--accent); }
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ---- RESULTS ---- */
+        .results { background: var(--white); }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .result-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--bg);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        .result-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .result-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* ---- PARTNERSHIP ---- */
+        .partnership {
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: var(--white);
+        }
+        .partnership .section-title { color: var(--white); }
+        .partnership-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        .partnership-text p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+        .partnership-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .partnership-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.25rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+        }
+        .partnership-feature-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 10px;
+            background: rgba(201,162,39,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .partnership-feature-icon svg { width: 20px; height: 20px; fill: var(--accent); }
+        .partnership-feature h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .partnership-feature p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ---- CTA ---- */
+        .cta-section {
+            background: var(--white);
+            text-align: center;
+        }
+        .cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .cta-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .cta-box p {
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            position: relative;
+        }
+        .cta-box .hero-cta { position: relative; }
+
+        /* ---- FOOTER ---- */
+        footer {
+            background: var(--primary);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        footer p {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* ---- MOBILE ---- */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+            }
+            .hamburger { display: flex; }
+            .about-grid,
+            .partnership-content { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: 1fr 1fr; }
+            .hero-stats { gap: 2rem; }
+            .cta-box { padding: 2.5rem 1.5rem; }
+        }
+        @media (max-width: 500px) {
+            .results-grid { grid-template-columns: 1fr; }
+            .about-highlights { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">Nicholas <span>Korom</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#partnership">Partnership</a></li>
+            <li><a href="#contact">Get Started</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">Founder &amp; Chief Accelerating Officer</div>
+        <h1>Building Tax-Saving, Cash-Flowing <span>Airbnb Portfolios</span></h1>
+        <p>Nicholas Korom is the founder of My BnB Accelerator, helping high-income earners acquire short-term rental properties that generate cash flow and significant tax savings through a 95% done-for-you process.</p>
+        <a href="#contact" class="hero-cta">
+            Book a Consultation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-num">500+</div>
+                <div class="hero-stat-label">Homes Closed</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">300+</div>
+                <div class="hero-stat-label">Happy Clients</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">80%</div>
+                <div class="hero-stat-label">Repeat Buyer Rate</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">5+</div>
+                <div class="hero-stat-label">Years Track Record</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="about-text">
+                <div class="section-label">About</div>
+                <h2 class="section-title">Taking the Guesswork Out of STR Investing</h2>
+                <p>Nicholas Korom is the founder and Chief Accelerating Officer of My BnB Accelerator, LLC, a done-for-you short-term rental acquisition and management service built exclusively for high-income earners making over $500,000 per year.</p>
+                <p>With over 500 homes closed for more than 300 clients across the United States, Nick has built a reputation for identifying cash-flowing properties, negotiating aggressively on behalf of his clients, and connecting them with the right tax advisors, designers, and property managers to keep the entire process hands-off.</p>
+                <p>His proprietary approach, The Reverse Offset Method, combines real estate acquisition with strategic tax planning, helping clients offset significant portions of their W-2 or business income through properly structured short-term rental investments.</p>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h4>Done-For-You</h4>
+                        <p>95% hands-off process from deal sourcing to management setup.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>Tax Strategy</h4>
+                        <p>Every acquisition paired with cost segregation and CPA introductions.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>Nationwide</h4>
+                        <p>Properties across top-performing STR markets in the U.S.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>Vetted Partners</h4>
+                        <p>Trusted network of designers, PMs, and contractors in every market.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-visual-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22" fill="none" stroke="#c9a227" stroke-width="2"/></svg>
+                </div>
+                <h3>My BnB Accelerator</h3>
+                <p>Cash-flowing, tax-saving Airbnb investments for high-income earners.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="section-inner">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Full-Service STR Investment Support</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3" fill="none" stroke="#c9a227" stroke-width="2"/></svg>
+                </div>
+                <h3>Deal Sourcing &amp; Acquisition</h3>
+                <p>We review approximately 1,000 deals per week, filter out 98% based on cash flow and compliance, and present you with the best opportunities on a silver platter.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Aggressive Negotiation</h3>
+                <p>On average, we save clients $25,000 to $85,000 in down payments, closing costs, loan origination fees, and buyer's agent fees per deal.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10" stroke="#c9a227" stroke-width="2"/></svg>
+                </div>
+                <h3>Tax Savings Strategy</h3>
+                <p>We connect you with top CPA firms specializing in STR tax strategy and secure discounted cost segregation studies to maximize your tax deductions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+                </div>
+                <h3>Design Coordination</h3>
+                <p>We pair you with the best local interior designers in every market to furnish and style your property for maximum appeal and revenue.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Property Management Setup</h3>
+                <p>We connect you with vetted property managers in every market so your investment stays 95% hands-off from day one.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" fill="none" stroke="#c9a227" stroke-width="2"/></svg>
+                </div>
+                <h3>Ongoing Portfolio Growth</h3>
+                <p>With an 80% repeat buyer rate, most clients come back to expand their portfolios with additional properties year after year.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+    <div class="section-inner">
+        <div class="section-label">Track Record</div>
+        <h2 class="section-title">Proven Results for High-Income Investors</h2>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-num">500+</div>
+                <div class="result-label">Homes Closed</div>
+            </div>
+            <div class="result-card">
+                <div class="result-num">300+</div>
+                <div class="result-label">Clients Served</div>
+            </div>
+            <div class="result-card">
+                <div class="result-num">80%</div>
+                <div class="result-label">Repeat Buyer Rate</div>
+            </div>
+            <div class="result-card">
+                <div class="result-num">5+</div>
+                <div class="result-label">Years in Business</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARTNERSHIP -->
+<section class="partnership" id="partnership">
+    <div class="section-inner">
+        <div class="section-label">Strategic Partnership</div>
+        <h2 class="section-title">Tax Strategy Through AE Tax Advisors</h2>
+        <div class="partnership-content">
+            <div class="partnership-text">
+                <p>My BnB Accelerator partners with AE Tax Advisors to ensure every client's short-term rental investment is paired with a comprehensive tax strategy. This partnership gives BnB Accelerator clients direct access to specialized CPAs and cost segregation engineers who understand the unique tax benefits of STR ownership.</p>
+                <p>Through this partnership, clients receive strategic tax planning, cost segregation studies, and ongoing advisory services designed to maximize the tax savings potential of their rental properties.</p>
+            </div>
+            <div class="partnership-features">
+                <div class="partnership-feature">
+                    <div class="partnership-feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                    </div>
+                    <div>
+                        <h4>Cost Segregation Studies</h4>
+                        <p>Engineering-based analyses to accelerate depreciation and maximize Year 1 tax deductions.</p>
+                    </div>
+                </div>
+                <div class="partnership-feature">
+                    <div class="partnership-feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <div>
+                        <h4>Strategic Tax Advisory</h4>
+                        <p>Year-round tax planning to ensure STR investments are structured for optimal tax treatment.</p>
+                    </div>
+                </div>
+                <div class="partnership-feature">
+                    <div class="partnership-feature-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8l-4 4-4-4" fill="none" stroke="#c9a227" stroke-width="2"/></svg>
+                    </div>
+                    <div>
+                        <h4>Material Participation</h4>
+                        <p>Guidance on qualifying for active loss treatment under IRC material participation rules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+    <div class="section-inner">
+        <div class="cta-box">
+            <h2>Ready to Build Your STR Portfolio?</h2>
+            <p>Book a consultation with Nicholas Korom and the BnB Accelerator team to see if a done-for-you Airbnb investment is right for you.</p>
+            <a href="https://mybnbaccelerator.com/scb-schedule-appointment" class="hero-cta" target="_blank" rel="noopener">
+                Apply Now
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Nicholas Korom. Chief Accelerating Officer, <a href="https://mybnbaccelerator.com" target="_blank" rel="noopener">My BnB Accelerator, LLC</a>. All rights reserved.</p>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('open');
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('open');
+        });
+    });
+</script>
+
+</body>
+</html>
