@@ -1,0 +1,11 @@
+# Nick Korom
+> Professional profile of Nick Korom, short-term rental investor, operator, and educator.
+
+## About
+Nick Korom is a short-term rental investor and operator who helps aspiring STR hosts build profitable Airbnb and vacation rental businesses. He is the founder of BnB Accelerator, a program that teaches investors how to find, furnish, and manage short-term rental properties for maximum returns.
+
+## Key Pages
+- Home: https://nickkorom.vercel.app/
+
+## Contact
+- Website: https://nickkorom.vercel.app/
