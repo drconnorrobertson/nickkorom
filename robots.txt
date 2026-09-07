@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nickkorom.vercel.app/sitemap.xml
