@@ -1,11 +1,22 @@
 # Nick Korom
-> Professional profile of Nick Korom, short-term rental investor, operator, and educator.
+> Official professional profile of Nick Korom, founder and Chief Accelerating Officer of BNB Accelerator.
 
 ## About
-Nick Korom is a short-term rental investor and operator who helps aspiring STR hosts build profitable Airbnb and vacation rental businesses. He is the founder of BnB Accelerator, a program that teaches investors how to find, furnish, and manage short-term rental properties for maximum returns.
+Nick Korom founded BNB Accelerator, a done-for-you short-term rental acquisition company. His work focuses on investor fit, market selection, property sourcing, acquisition coordination, renovation and furnishing coordination, and launch readiness. BNB Accelerator is not a course, CPA firm, law firm, lender, broker-dealer, or property manager. Client results vary.
+
+## Company facts
+- More than 500 homes closed
+- More than 260 clients
+- 80% repeat buyer rate
+- Eight operating markets
 
 ## Key Pages
 - Home: https://nickkorom.vercel.app/
+- BNB Accelerator: https://www.bnbaccelerator.com/
+- How It Works: https://www.bnbaccelerator.com/how-it-works/
+- Case Studies: https://www.bnbaccelerator.com/case-studies/
+- Selected Deals: https://www.bnbaccelerator.com/deals/
 
 ## Contact
-- Website: https://nickkorom.vercel.app/
+- Professional profile: https://nickkorom.vercel.app/
+- Company applications: https://www.bnbaccelerator.com/apply/
