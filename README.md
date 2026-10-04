@@ -10,7 +10,7 @@ The build generates seven pages, canonical URLs, social metadata, Person/Website
 
 ## Domain migration
 
-The temporary site is https://nickkorom.vercel.app. The existing nickkorom.com hosting has not been changed.
+The temporary site is https://www.nickkorom.com. The existing nickkorom.com hosting has not been changed.
 
 Before moving the domain:
 

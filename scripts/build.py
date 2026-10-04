@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,html,os
-root=Path(__file__).resolve().parents[1]; base=os.environ.get('SITE_URL','https://nickkorom.vercel.app').rstrip('/'); company='https://www.bnbaccelerator.com'; apply=company+'/apply/'
+root=Path(__file__).resolve().parents[1]; base=os.environ.get('SITE_URL','https://www.nickkorom.com').rstrip('/'); company='https://www.bnbaccelerator.com'; apply=company+'/apply/'
 nav=[('Home','/'),('About','/about/'),('BNB Accelerator','/bnb-accelerator/'),('Speaker','/speaker/'),('Press','/press-media/')]
 def button(label,url=apply,cls=''):return f'<a class="btn {cls}" href="{url}">{label} <span aria-hidden="true">↗</span></a>'
 def cards(items):return '<div class="grid">'+''.join(f'<article class="card"><span class="num">0{i+1}</span><h3>{t}</h3><p>{p}</p>{f"<a class=text-link href={u}>Explore →</a>" if u else ""}</article>' for i,(t,p,u) in enumerate(items))+'</div>'
